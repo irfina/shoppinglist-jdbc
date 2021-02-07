@@ -77,6 +77,10 @@ public class DaftarBelanjaJdbcDao
             return true;
         }
         catch (SQLException ex) {
+            try {
+                con.rollback();
+            }
+            catch (SQLException e) { }
             System.out.println("Error saat insert data: " + ex.getMessage());
             ex.printStackTrace(System.out);
             return false;
