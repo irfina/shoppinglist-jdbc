@@ -28,7 +28,7 @@ public class DbUtil
         
         String jdbcUrl = "jdbc:postgresql://localhost:5432/demo_pbp";
         try {
-            jdbcConn = DriverManager.getConnection(jdbcUrl, "dbexerphi_dba", "admin");
+            jdbcConn = DriverManager.getConnection(jdbcUrl, "userdemo", "demo");
             jdbcConn.setAutoCommit(false);
         }
         catch (SQLException ex) {
